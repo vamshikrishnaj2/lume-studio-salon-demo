@@ -1,0 +1,6 @@
+{
+  "name": "Lumé Studio | Luxury Contemporary Salon",
+  "description": "A high-end editorial salon demo website for Lumé Studio showcasing precision haircuts, bespoke colour, bridal styling, and skin treatments in Hyderabad.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

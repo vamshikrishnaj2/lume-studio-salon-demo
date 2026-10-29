@@ -1,0 +1,306 @@
+import heroExteriorImg from '../assets/images/hero_salon_exterior_1793214297553.jpg';
+import balayageFocusImg from '../assets/images/product_balayage_focus_1793214298792.jpg';
+import bridalUpdoFocusImg from '../assets/images/product_bridal_updo_focus_1793214297556.jpg';
+import skinFacialRitualFocusImg from '../assets/images/skin_facial_ritual_focus_1793214297566.jpg';
+import stylistPortraitImg from '../assets/images/stylist_portrait_editorial_1793214298227.jpg';
+import { ServiceItem, GalleryItem, TeamMember } from '../types/salon';
+
+export const salonImages = {
+  hero: heroExteriorImg,
+  balayage: balayageFocusImg,
+  bridal: bridalUpdoFocusImg,
+  skin: skinFacialRitualFocusImg,
+  stylist: stylistPortraitImg,
+};
+
+export const salonInfo = {
+  name: 'Lumé Studio',
+  tagline: 'Your style. Refined.',
+  subheading: 'Modern cuts, colour and beauty services designed around your personal style.',
+  address: 'Plot 482, Road No. 36, Jubilee Hills, Hyderabad, Telangana 500033',
+  phoneDisplay: '+91 40 2355 8890',
+  phoneRaw: '+914023558890',
+  whatsappDisplay: '+91 98490 12890',
+  whatsappRaw: '919849012890',
+  email: 'concierge@lumestudio.demo',
+  hours: [
+    { days: 'Monday – Saturday', time: '10:00 AM – 8:00 PM' },
+    { days: 'Sunday', time: '11:00 AM – 6:00 PM' },
+  ],
+  amenities: [
+    'Complimentary Valet Parking',
+    'Private Bridal & VIP Styling Suites',
+    'Bespoke Specialty Coffee & Champagne Service',
+    'Air-Purified Botanical Atmosphere',
+  ],
+};
+
+export const corePillars = [
+  {
+    id: 'cuts',
+    title: 'Haircuts & Styling',
+    description: 'Bespoke sculptural cuts crafted to complement bone structure, hair density, and effortless daily movement.',
+    image: salonImages.stylist,
+    sampleStart: '₹2,400',
+    tags: ['Custom Consultation', 'Scalp Clarifying Wash', 'Signature Blow-Dry'],
+  },
+  {
+    id: 'colour',
+    title: 'Hair Colour',
+    description: 'Dimensional French balayage, bespoke glossing, and seamless grey blending using gentle, ammonia-free pigments.',
+    image: salonImages.balayage,
+    sampleStart: '₹5,500',
+    tags: ['Dimensional Balayage', 'French Glossing', 'Tone Harmonization'],
+  },
+  {
+    id: 'bridal',
+    title: 'Bridal Styling',
+    description: 'Editorial occasion hair, heirloom jewellery draping, and contemporary veil artistry tailored for modern celebrations.',
+    image: salonImages.bridal,
+    sampleStart: '₹14,000',
+    tags: ['Trial Session', 'Day-of Suite Service', 'Veil & Jewellery Placement'],
+  },
+  {
+    id: 'skin',
+    title: 'Skin & Beauty',
+    description: 'Targeted botanical facial rituals, micro-current lymphatic drainage, and luminous prep for flawless radiance.',
+    image: salonImages.skin,
+    sampleStart: '₹3,800',
+    tags: ['Hydra-Glow Ritual', 'Lymphatic Sculpt', 'Skin Microbiome Care'],
+  },
+];
+
+export const sampleServices: ServiceItem[] = [
+  // Haircuts & Styling
+  {
+    id: 'cut-signature',
+    name: 'Lumé Signature Precision Cut & Blow-Dry',
+    category: 'cuts',
+    categoryLabel: 'Haircuts & Styling',
+    duration: '60 mins',
+    priceSample: '₹2,600',
+    description: 'Comprehensive hair architecture consultation, relaxing botanical hair bath with scalp massage, precision scissor & razor cut, and curated salon finish.',
+    features: ['In-depth face-shape consultation', 'Botanical cleansing & condition', 'Curated styling tutorial'],
+    recommendedFor: 'Guests desiring polished daily versatility',
+  },
+  {
+    id: 'cut-master',
+    name: 'Creative Director Bespoke Restyle',
+    category: 'cuts',
+    categoryLabel: 'Haircuts & Styling',
+    duration: '75 mins',
+    priceSample: '₹3,800',
+    description: 'Complete stylistic transformation by Creative Director Maya Sen. Ideal for major length alterations, curtain bangs, and customized texturing.',
+    features: ['Senior Director consultation', 'Multi-phase dry & wet cut technique', 'Long-lasting signature blowout'],
+    recommendedFor: 'Complete silhouette overhaul',
+  },
+  {
+    id: 'blowdry-couture',
+    name: 'Editorial Thermal Wave & Luxe Blowout',
+    category: 'cuts',
+    categoryLabel: 'Haircuts & Styling',
+    duration: '45 mins',
+    priceSample: '₹1,900',
+    description: 'Deep moisture infusion followed by tension round-brush styling and soft velvet waves crafted with low-heat ceramic irons.',
+    features: ['Thermal barrier treatment', 'Root volume lift', 'Humidity-resistant mist'],
+    recommendedFor: 'Dinners, presentations & galas',
+  },
+
+  // Hair Colour
+  {
+    id: 'colour-balayage',
+    name: 'Seamless Dimensional French Balayage',
+    category: 'colour',
+    categoryLabel: 'Hair Colour',
+    duration: '180 mins',
+    priceSample: '₹7,800',
+    description: 'Hand-painted freehand lightening seamlessly blended from soft roots to luminous ribboned ends, completed with a bespoke conditioning gloss toner.',
+    features: ['Custom lightener with bond-builder', 'Root melt blending', 'Gloss glaze & blowout included'],
+    recommendedFor: 'Natural sunlit dimension with graceful grow-out',
+  },
+  {
+    id: 'colour-gloss',
+    name: 'Luxe Acidic Gloss & Tone Harmonizer',
+    category: 'colour',
+    categoryLabel: 'Hair Colour',
+    duration: '60 mins',
+    priceSample: '₹3,200',
+    description: 'Restores brilliant reflective shine, neutralizes brassiness, and seals the hair cuticle without lifting natural hair level.',
+    features: ['pH-balancing vegan formula', 'High-shine botanical infusion', 'Scalp tension release massage'],
+    recommendedFor: 'Maintaining brilliance between colour sessions',
+  },
+  {
+    id: 'colour-grey-melt',
+    name: 'Natural Grey Camouflage & Tone Softening',
+    category: 'colour',
+    categoryLabel: 'Hair Colour',
+    duration: '90 mins',
+    priceSample: '₹4,500',
+    description: 'Delicate multi-tonal root coverage that blends silver hair naturally without harsh line-of-demarcation regrowth.',
+    features: ['Gentle scalp barrier shield', 'Multi-pigment micro-application', 'Deep nourishment mask'],
+    recommendedFor: 'Low-maintenance, natural grey blending',
+  },
+
+  // Bridal Styling
+  {
+    id: 'bridal-couture-day',
+    name: 'The Lumé Bride — Day-of Signature Package',
+    category: 'bridal',
+    categoryLabel: 'Bridal Styling',
+    duration: '180 mins',
+    priceSample: '₹18,500',
+    description: 'Complete high-touch bridal experience in our private styling suite. Includes luxury bridal updo/sculpted waves, dupatta draping, floral artistry, and bridal touch-up kit.',
+    features: ['Private VIP suite access', 'Jewellery & dupatta anchoring', 'Champagne & curated refreshments', 'Emergency beauty kit'],
+    recommendedFor: 'Wedding ceremony & reception celebrations',
+  },
+  {
+    id: 'bridal-trial',
+    name: 'Bridal Hair Architecture & Trial Session',
+    category: 'bridal',
+    categoryLabel: 'Bridal Styling',
+    duration: '120 mins',
+    priceSample: '₹6,500',
+    description: 'Detailed pre-wedding consultation exploring 2–3 bespoke styles matched with your wedding ensembles, headpieces, and neckline.',
+    features: ['Ensemble & neckline study', 'Detailed photographic records', 'Styling durability testing'],
+    recommendedFor: 'Conducted 4–8 weeks prior to wedding',
+  },
+  {
+    id: 'occasion-sangeet',
+    name: 'Sangeet & Cocktail Textured Sculpting',
+    category: 'bridal',
+    categoryLabel: 'Bridal Styling',
+    duration: '75 mins',
+    priceSample: '₹4,200',
+    description: 'Movement-friendly textured ponytails, cascading Hollywood waves, or modern bohemian half-up braids engineered to hold all night.',
+    features: ['High-hold humidity defense', 'Seamless extension blending', 'Accessory placement'],
+    recommendedFor: 'Bridesmaids and festive party attendees',
+  },
+
+  // Skin & Beauty
+  {
+    id: 'skin-radiance',
+    name: 'Lumé Radiance Oxygen & Hydration Facial',
+    category: 'skin',
+    categoryLabel: 'Skin & Beauty',
+    duration: '75 mins',
+    priceSample: '₹4,800',
+    description: 'Gentle ultrasonic exfoliation followed by high-pressure peptide infusion, cryo-sculpt globes, and intensive barrier-restoring ceramide wrap.',
+    features: ['Micro-exfoliation without downtime', 'Customized peptide cocktail', 'Cryo-cooling lymphatic contour'],
+    recommendedFor: 'Instant red-carpet glow and deep hydration',
+  },
+  {
+    id: 'skin-lymphatic',
+    name: 'Sculpt & Lift Facial Gua Sha Ritual',
+    category: 'skin',
+    categoryLabel: 'Skin & Beauty',
+    duration: '60 mins',
+    priceSample: '₹3,600',
+    description: 'Traditional obsidian gua sha and rhythmic manual drainage designed to depuff cheekbones, define jawline, and relieve facial tension.',
+    features: ['Organic cold-pressed camellia oil', 'Acupressure point release', 'Cooling botanical eye compress'],
+    recommendedFor: 'Contouring and stress relief',
+  },
+  {
+    id: 'skin-brow-lash',
+    name: 'Editorial Brow Architecture & Keratin Lash Lift',
+    category: 'skin',
+    categoryLabel: 'Skin & Beauty',
+    duration: '60 mins',
+    priceSample: '₹2,800',
+    description: 'Custom brow shaping, hybrid tinting, and gentle keratin lash infusion for a defined, wake-up-ready natural gaze.',
+    features: ['Precision mapping', 'Custom-blended tint', 'Keratin conditioning glaze'],
+    recommendedFor: 'Effortless everyday definition',
+  },
+];
+
+export const galleryWorks: GalleryItem[] = [
+  {
+    id: 'work-1',
+    title: 'Sun-Drenched Honey Balayage & French Waves',
+    category: 'colour',
+    categoryName: 'Dimensional Balayage',
+    stylist: 'Arjun Varma',
+    image: salonImages.balayage,
+    aspect: '4:3',
+    description: 'Fine freehand micro-lights melted into warm honey ribbons, creating rich dimensional contrast for dark chestnut hair.',
+    technique: 'Open-air clay lightener + 9.13 Demi-permanent gloss',
+  },
+  {
+    id: 'work-2',
+    title: 'Sculptural Modern Chignon with Heirloom Gold',
+    category: 'bridal',
+    categoryName: 'Bridal Styling',
+    stylist: 'Ananya Rao',
+    image: salonImages.bridal,
+    aspect: '4:3',
+    description: 'A contemporary take on the timeless bridal bun, softly textured around the crown to frame the face with architectural poise.',
+    technique: 'Thermal foundation prep, tension-free internal padding, secure anchor points',
+  },
+  {
+    id: 'work-3',
+    title: 'Luminous Dew Skin & Botanical Facial Therapy',
+    category: 'skin',
+    categoryName: 'Skin Radiance',
+    stylist: 'Dr. Sophia Chen',
+    image: salonImages.skin,
+    aspect: '4:3',
+    description: 'Ultra-hydrated, glassy complexion achieved through non-invasive peptide infusion and cold obsidian gua sha sculpting.',
+    technique: 'Ultrasonic pore sweep + Triple Hyaluronic Complex + Cryo contour',
+  },
+  {
+    id: 'work-4',
+    title: 'Precision Parisian Bob & Curtain Bangs',
+    category: 'cuts',
+    categoryName: 'Precision Cuts',
+    stylist: 'Maya Sen',
+    image: salonImages.stylist,
+    aspect: '4:3',
+    description: 'Clean blunt perimeter with weightless internal graduation for organic swing and effortless low-maintenance styling.',
+    technique: 'Wet-line scissor architecture followed by dry freehand point texturizing',
+  },
+];
+
+export const teamMembers: TeamMember[] = [
+  {
+    id: 'maya-sen',
+    name: 'Maya Sen',
+    role: 'Creative Director & Founder',
+    experience: '14+ Years Experience',
+    specialty: 'Precision Hair Architecture & Bespoke Restyling',
+    bio: 'DEMO CONTENT: Maya Sen is a fictional creative director archetype used for demonstration purposes. Her bio, training, and certifications are simulated to showcase portfolio potential.',
+    image: salonImages.stylist,
+    certifications: ['Vidal Sassoon London Master Alum (Demo)'],
+  },
+  {
+    id: 'arjun-varma',
+    name: 'Arjun Varma',
+    role: 'Master Colourist & Balayage Educator',
+    experience: '10+ Years Experience',
+    specialty: 'Dimensional Balayage & Corrective Colour',
+    bio: 'DEMO CONTENT: Arjun Varma is a fictional master colourist archetype used for demonstration purposes. His training, expertise, and certifications are simulated.',
+    image: salonImages.balayage,
+    certifications: ['L\'Oréal Professionnel Color Specialist (Demo)'],
+  },
+  {
+    id: 'ananya-rao',
+    name: 'Ananya Rao',
+    role: 'Bridal Artistry & Couture Hair Lead',
+    experience: '9+ Years Experience',
+    specialty: 'Contemporary Bridal Updos & Veil Anchoring',
+    bio: 'DEMO CONTENT: Ananya Rao is a fictional bridal styling archetype used for demonstration purposes. Her expertise, training, and certifications are simulated.',
+    image: salonImages.bridal,
+    certifications: ['Bridal Couture Guild Fellow (Demo)'],
+  },
+  {
+    id: 'sophia-chen',
+    name: 'Dr. Sophia Chen',
+    role: 'Skin Health Aesthetician & Ritualist',
+    experience: '8+ Years Experience',
+    specialty: 'Lymphatic Gua Sha & Barrier Restoration',
+    bio: 'DEMO CONTENT: Dr. Sophia Chen is a fictional aesthetician archetype used for demonstration purposes. Her clinical background and credentials are simulated.',
+    image: salonImages.skin,
+    certifications: ['CIDESCO Certified Aesthetician (Demo)'],
+  },
+];
+
+
+
